@@ -1,0 +1,7 @@
+modules:
+  - type: akmods
+    install:
+      - zenergy
+      - ryzen-smu
+      - xone
+      - xpadneo

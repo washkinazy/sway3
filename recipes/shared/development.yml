@@ -1,0 +1,24 @@
+modules:
+  - type: rpm-ostree
+    keys:
+      - https://packages.microsoft.com/keys/microsoft.asc
+    repos:
+      - https://cli.github.com/packages/rpm/gh-cli.repo
+      - https://packages.microsoft.com/yumrepos/vscode/config.repo
+    install:
+      # Development
+      - git
+      - gh
+      - code
+      # Virtualization
+      - virt-manager
+      - virt-viewer
+      - libvirt
+      - qemu
+      - qemu-char-spice
+      - qemu-device-display-virtio-gpu
+      - qemu-device-display-virtio-vga
+      - qemu-device-usb-redirect
+      - qemu-img
+      - qemu-system-x86-core
+      - qemu-kvm

@@ -1,0 +1,26 @@
+---
+name: sway3
+description: Sway + i3 for when sway is challenged by nvidia
+base-image: ghcr.io/ublue-os/sericea-main
+image-version: latest
+
+modules:
+  - from-file: shared/akmods.yml
+  - from-file: shared/bling.yml
+  - from-file: shared/fonts.yml
+  - from-file: shared/files.yml
+  - from-file: shared/gschema.yml
+  - from-file: shared/flatpaks.yml
+  - from-file: shared/rpm-ostree.yml
+
+  # Multiple module files relating to specific targets
+  - from-file: shared/development.yml
+  - from-file: shared/containers.yml
+  - from-file: shared/tailscale.yml
+
+  # Custom justfiles
+  - type: justfiles
+    validate: true
+
+  # End with signing
+  - type: signing

@@ -1,0 +1,21 @@
+modules:
+  - type: rpm-ostree
+    repos:
+      - https://download.docker.com/linux/fedora/docker-ce.repo
+    install:
+      - podman
+      - podman-compose
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin
+
+  - type: systemd
+    system:
+      enabled:
+        - docker.service
+    user:
+      enabled:
+        - podman.service
+        - podman.socket

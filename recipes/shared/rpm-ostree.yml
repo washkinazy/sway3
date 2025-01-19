@@ -1,0 +1,49 @@
+modules:
+  - type: rpm-ostree
+    install:
+      # Utilities
+      - btop
+      - htop
+      - nmon
+      - fastfetch
+      - bash-completion
+      - bash-color-prompt
+      - fish
+      - solaar
+      - solaar-udev
+      - kitty
+      - zenity
+      - ansible
+      # Printing
+      - hplip
+      - system-config-printer
+      - system-config-printer-udev
+      # Audio & Video
+      - vulkan-loader
+      - vulkan-tools
+      - vulkan-validation-layers
+      - pipewire
+      - pipewire-pulseaudio
+      - pipewire-utils
+      - wireplumber
+      - pavucontrol
+      - playerctl
+      - libmediainfo
+      # Thunar & File Management
+      - thunar
+      - thunar-archive-plugin
+      - thunar-volman
+      - xarchiver
+      - unzip
+      - unrar
+      - p7zip
+      - p7zip-plugins
+      - zip
+      - bzip2
+      - gvfs-mtp
+      - gvfs-gphoto2
+      - gvfs-smb
+      - gvfs-nfs
+      - gvfs-fuse
+      - gvfs-archive
+      - trash-cli
