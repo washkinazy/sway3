@@ -1,8 +1,9 @@
-# BlueBuild Template &nbsp; [![bluebuild build badge](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
+# Sway3 &nbsp; [![bluebuild build badge](https://github.com/washkinazy/sway3/actions/workflows/build.yml/badge.svg)](https://github.com/washkinazy/sway3/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+## Local Dev Loop
 
-After setup, it is recommended you update this README to describe your custom image.
+Using the [Blue Build CLI](https://github.com/blue-build/cli?tab=readme-ov-file) there are a few [workflows](https://blue-build.org/how-to/local/) that can be used to validate the container build prior to push. 
+
 
 ## Installation
 
@@ -13,7 +14,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/blue-build/template:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/washkinazy/sway3:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -21,7 +22,7 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/blue-build/template:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/washkinazy/sway3:latest
   ```
 - Reboot again to complete the installation
   ```
@@ -32,6 +33,8 @@ The `latest` tag will automatically point to the latest build. That build will s
 
 ## ISO
 
+**TODO**
+
 If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
 
 ## Verification
@@ -39,5 +42,5 @@ If build on Fedora Atomic, you can generate an offline ISO with the instructions
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/blue-build/template
+cosign verify --key cosign.pub ghcr.io/washkinazy/sway3
 ```

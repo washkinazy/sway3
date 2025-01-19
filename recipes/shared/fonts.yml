@@ -1,0 +1,9 @@
+modules:
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode
+        - Iosevka
+        - SourceCodePro
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
